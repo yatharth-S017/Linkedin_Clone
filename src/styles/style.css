@@ -1,0 +1,321 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* common */
+
+main{
+    background-color: rgb(243, 235, 235);
+    height: 100%;
+    width: 100%;
+    margin-top: 3.4rem;
+}
+
+/* .iconPart:hover{
+    color: black;
+}
+.textpart:hover{
+    color: black;
+} */
+.spanClass1:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: .5s;
+}
+.spanClass1:hover .textpart{
+    color: black;
+}
+.spanClass1:hover .iconPart{
+    color: black;
+}
+
+header{
+    margin-bottom: 0.8rem;
+   
+  /* position: fixed; */
+  
+}
+
+
+.puzzle{
+  display: flex;
+  margin-top: 1rem;
+  
+}
+.puzzle:hover{
+  background-color: rgb(213, 211, 211);
+  padding: 3px;
+  width: 85%;
+  border-radius: 8px;
+
+}
+
+
+
+
+
+
+@media  screen and (orientation : landscape) {
+
+    .searchField{
+      width: 300px;
+    }
+
+    .spanClass1{
+        margin-right: 30px;
+
+    }
+
+    
+
+    .iconPart{
+        color: rgb(150, 148, 148);
+    }
+    
+    .textpart{
+        color: rgb(107, 104, 104);
+    }
+    
+
+
+    .maindiv{
+      display: grid;
+      grid-template-columns: 2.5fr 5fr 3fr;
+      height: 100%;
+      margin: 1rem;
+      
+      
+    }
+    .leftdiv{
+      margin: 1rem;
+      margin-top: 1rem;
+      /* background-color: yellow; */
+    }
+
+
+    .left1{
+      margin: 0.3rem;
+    }
+    .left2{
+      margin: 0.3rem;
+      margin-top: 0.8rem;
+    }
+    .left3{
+      margin: 0.3rem;
+      margin-top: .8rem;
+    }
+    .left4{
+      margin: 0.3rem;
+      margin-top: 0.8rem;
+    }
+
+
+
+
+
+
+
+    .middiv{
+      
+      margin-top: 1.5rem;
+      margin-left: 0.3rem;
+      margin-right: 0.3rem;
+    }
+    
+    .post{
+      border-radius: 0.5rem;
+    }
+
+    .post1{
+      margin-top: 0.4rem;
+      padding-top: 0.7rem;
+    }
+
+    .post2{
+      margin-top: 1rem;
+      padding-bottom: 0.4rem;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .rightdiv{
+      margin: 1rem;
+      margin-top: 1rem;
+      
+    }
+
+    .right1{
+      margin: 0.3rem;
+    }
+
+    .right2{
+      margin: 0.3rem;
+      margin-top: 0.8rem;
+      border-radius: 0.4rem;
+      padding: 0.7rem;
+    }
+
+    .right3{
+      margin: 0.5rem;
+      margin-top: 0.8rem;
+      
+    }
+
+    
+}
+
+
+
+
+@media  screen and (orientation : portrait) {
+    .searchField{
+        width: 100px;
+      }
+      .textpart{
+        display: none;
+      }
+
+}
+
+
+
+@media (max-width: 768px) { 
+    .searchField{
+        width: 100px;
+      }
+
+      .textpart{
+        display: none;
+      }
+
+      .last2{
+        display: none;
+      }
+
+      .iconPart{
+        color: rgb(161, 161, 161);
+      }
+      span{
+        margin-right: 15px;
+      }
+
+
+      
+ }
+
+ @media (max-width: 900px){
+  .rightdiv{
+    display: none;
+  }
+ }
+ @media (max-width: 650px){
+  .leftdiv{
+    display: none;
+  }
+ }
+
+
+
+
+ /* making post part responsive */
+
+ .post {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  max-width: 100%;
+}
+
+/* Make the post1 section stack on small screens */
+.post1 {
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.post1 img {
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
+}
+
+/* Make the input field take full width on smaller screens */
+#startPost {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Post2 section (Media / Event / Article) styling */
+.post2 span {
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .post1 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #startPost {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+
+  .post2 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding-top: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .post {
+    padding: 0.8rem;
+  }
+
+  .post2 span {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* ensures it stays above all other elements */
+  background-color: white; /* so content doesn't show behind it */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* optional: subtle shadow */
+}
+
+.last {
+  position: sticky;
+  top: 80px; /* or adjust depending on your fixed header height */
+  z-index: 999;
+}
+
+
